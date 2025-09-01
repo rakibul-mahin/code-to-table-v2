@@ -93,7 +93,7 @@ export default function CodeTable({ code, style }: CodeTableProps) {
           await navigator.clipboard.write([clipboardItem]);
           alert('Table copied to clipboard! You can now paste it into Google Docs with proper formatting.');
           return;
-        } catch (clipboardError) {
+        } catch {
           console.log('Clipboard API failed, trying fallback method...');
         }
       }
@@ -276,8 +276,8 @@ export default function CodeTable({ code, style }: CodeTableProps) {
       <div className="mt-4 text-sm text-gray-500">
         <p>Total lines: {lines.length}</p>
                  <p className="mt-2">
-           <strong>Tip:</strong> Use "Copy Text" for plain text format, "Copy Table" for Google Docs formatting, 
-           "Download PNG" for an image, or "Select Table" to manually copy the formatted table.
+           <strong>Tip:</strong> Use &quot;Copy Text&quot; for plain text format, &quot;Copy Table&quot; for Google Docs formatting, 
+           &quot;Download PNG&quot; for an image, or &quot;Select Table&quot; to manually copy the formatted table.
          </p>
       </div>
     </div>

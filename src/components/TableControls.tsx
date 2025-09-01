@@ -36,7 +36,7 @@ export default function TableControls({ style, onStyleChange }: TableControlsPro
             <label className="block text-sm text-gray-600 mb-1">Border Style</label>
             <select
               value={style.borderStyle}
-              onChange={(e) => onStyleChange({ borderStyle: e.target.value as any })}
+              onChange={(e) => onStyleChange({ borderStyle: e.target.value as 'solid' | 'dashed' | 'dotted' | 'none' })}
               className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="solid">Solid</option>
@@ -78,7 +78,7 @@ export default function TableControls({ style, onStyleChange }: TableControlsPro
             <label className="block text-sm text-gray-600 mb-1">Font Weight</label>
             <select
               value={style.fontWeight}
-              onChange={(e) => onStyleChange({ fontWeight: e.target.value as any })}
+              onChange={(e) => onStyleChange({ fontWeight: e.target.value as 'normal' | 'bold' })}
               className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="normal">Normal</option>
